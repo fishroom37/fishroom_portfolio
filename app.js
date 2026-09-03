@@ -1,176 +1,511 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>권기현 | 백엔드 엔지니어 포트폴리오</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="layout">
-    <!-- Left Sidebar Navigation -->
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <h1 class="logo">Gihyeon Kwon</h1>
-        <p class="role">Backend SW Engineer</p>
-      </div>
+:root {
+  --bg-main: #f8fafc;
+  --bg-sidebar: #ffffff;
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #eff6ff;
+  --font-mono: 'JetBrains Mono', monospace;
+}
 
-      <nav class="nav-menu">
-        <button class="nav-item active" data-section="intro" onclick="switchSection('intro')">Intro</button>
-        <button class="nav-item" data-section="about" onclick="switchSection('about')">About</button>
-        <button class="nav-item" data-section="skills" onclick="switchSection('skills')">Skills</button>
-        <button class="nav-item" data-section="experience" onclick="switchSection('experience')">Experience</button>
-        <button class="nav-item" data-section="projects" onclick="switchSection('projects')">Projects</button>
-      </nav>
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-      <div class="sidebar-footer">
-        <div class="status-indicator">
-          <span class="dot"></span>
-          <span>구직 중 (대구·경산)</span>
-        </div>
-        <p class="copyright">© 2026 Gihyeon Kwon.</p>
-      </div>
-    </aside>
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  line-height: 1.6;
+}
 
-    <!-- Main Content Area -->
-    <main class="content-area">
-      <!-- Section: Intro -->
-      <section id="section-intro" class="view-section active">
-        <div class="intro-box">
-          <span class="sub-heading">Hello, World!</span>
-          <h2 class="main-title">안정적인 백엔드 로직과<br>신뢰할 수 있는 데이터 처리를 만듭니다.</h2>
-          <p class="intro-desc">
-            건축 현장에서 익힌 끈기와 구조적 분석 능력을 토대로 소프트웨어 분야로 전향한 3년 차 백엔드 엔지니어 권기현입니다.<br>
-            전자정부프레임워크(eGovFrame) 기반 공공 포털 구축부터 기업 맞춤형 솔루션까지, 실제 동작하는 비즈니스 가치를 안정적인 코드로 풀어냅니다.
-          </p>
-          <div class="quick-links">
-            <button class="btn btn-primary" onclick="switchSection('projects')">프로젝트 둘러보기</button>
-            <button class="btn btn-secondary" onclick="switchSection('experience')">경력 사항 확인</button>
-          </div>
-        </div>
-      </section>
+/* Layout */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
 
-      <!-- Section: About -->
-      <section id="section-about" class="view-section">
-        <h2 class="section-title">About Me</h2>
-        <div class="card about-card">
-          <h3>도면에서 시스템 아키텍처로의 전환</h3>
-          <p>
-            대학에서 건축을 전공하고 사회 초년생으로 2년간 현장 실무를 수행하며 하나의 구조물을 완성해 나가는 책임감과 끈기를 체득했습니다. 
-            이후 IT 개발의 매력에 이끌려 전환을 결심했고, 교육 과정을 거쳐 약 3년 2개월간 웹 백엔드 실무에 매진해 왔습니다.
-          </p>
-          <p>
-            건축 현장에서 다진 꼼꼼함과 설계 관점은 데이터베이스 쿼리를 다듬고, 복잡한 비즈니스 규칙을 안정적인 프로그램 코드로 녹여내는 데 가장 큰 밑바탕이 되었습니다.
-          </p>
-          <div class="info-grid">
-            <div class="info-item">
-              <span class="label">거주지</span>
-              <span class="val">대구광역시 수성구 지산동</span>
-            </div>
-            <div class="info-item">
-              <span class="label">총 실무 경력</span>
-              <span class="val">3년 2개월 (2022.11 ~ 2025.12)</span>
-            </div>
-            <div class="info-item">
-              <span class="label">핵심 강점</span>
-              <span class="val">eGovFrame, 트랜잭션 관리, 쿼리 튜닝</span>
-            </div>
-          </div>
-        </div>
-      </section>
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
 
-      <!-- Section: Skills -->
-      <section id="section-skills" class="view-section">
-        <h2 class="section-title">Skills & Technologies</h2>
-        <div class="skills-wrapper">
-          <div class="skill-category card">
-            <h3>Backend Core</h3>
-            <ul class="skill-list">
-              <li><strong>Java:</strong> 객체지향 설계 및 비즈니스 로직 안정성 확보</li>
-              <li><strong>전자정부프레임워크(eGovFrame):</strong> 공공/대민 포털 표준 가이드 기반 개발</li>
-              <li><strong>Spring MVC / Spring Boot:</strong> 계층형 구조 설계 및 REST API 연동</li>
-              <li><strong>MyBatis:</strong> 복잡한 업무 쿼리 매핑 및 동적 SQL 작성</li>
-            </ul>
-          </div>
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+}
 
-          <div class="skill-category card">
-            <h3>Database & Infra</h3>
-            <ul class="skill-list">
-              <li><strong>Oracle / PostgreSQL:</strong> 대용량 업무 테이블 설계, 인덱스 및 실행계획 분석</li>
-              <li><strong>Transaction Control:</strong> 데이터 무결성을 보장하는 다중 결재 트랜잭션 처리</li>
-            </ul>
-          </div>
+.role {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-top: 4px;
+}
 
-          <div class="skill-category card">
-            <h3>Frontend & Security</h3>
-            <ul class="skill-list">
-              <li><strong>Web UI:</strong> JavaScript, jQuery, HTML5, CSS3, 웹 그리드 연동</li>
-              <li><strong>보안/가이드:</strong> SW개발보안(시큐어 코딩) 이수, 개인정보보호 기술적 조치 적용</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 40px 0;
+}
 
-      <!-- Section: Experience -->
-      <section id="section-experience" class="view-section">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-          <div class="timeline-item card">
-            <div class="time-header">
-              <span class="company">(주)휴비즈아이씨티</span>
-              <span class="period">2022.11 ~ 2025.12 (3년 2개월)</span>
-            </div>
-            <div class="position">SW개발팀 / 전임연구원 (백엔드 개발)</div>
-            <p class="exp-summary">전자정부프레임워크 및 Java 기반 공공기관 웹 포털, 기업 대내외 시스템 구축 및 운영 업무 총괄 수행.</p>
-            <ul class="exp-bullets">
-              <li>공공 대민 포털 4개, 기업 엔터프라이즈 솔루션 5개 등 총 9개 메인 프로젝트 완수</li>
-              <li>공사원가관리 및 견적 자동 산출 시스템 등 복잡 비즈니스 로직 설계 담당</li>
-              <li>지자체 시스템 성능 개선 및 사용자 민원 해결을 위한 상시 SM 운영 관리</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+.nav-item {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
 
-      <!-- Section: Projects -->
-      <section id="section-projects" class="view-section">
-        <div class="section-header-flex">
-          <h2 class="section-title">Projects</h2>
-          <div class="filter-group">
-            <button class="filter-chip active" onclick="filterCardList('all', event)">전체</button>
-            <button class="filter-chip" onclick="filterCardList('public', event)">공공</button>
-            <button class="filter-chip" onclick="filterCardList('enterprise', event)">기업솔루션</button>
-            <button class="filter-chip" onclick="filterCardList('sm', event)">운영SM</button>
-          </div>
-        </div>
-        <div class="project-card-grid" id="projectContainer"></div>
-      </section>
-    </main>
-  </div>
+.nav-item:hover {
+  background-color: var(--border-light);
+  color: var(--text-primary);
+}
 
-  <!-- Detail Modal -->
-  <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
-    <div class="modal-window">
-      <button class="modal-close-btn" onclick="closeDetailModal()">&times;</button>
-      <span class="modal-badge" id="modalCategory">공공</span>
-      <h2 class="modal-title" id="modalTitle">프로젝트 명칭</h2>
-      
-      <div class="modal-meta-grid">
-        <div><strong>수행 기간:</strong> <span id="modalPeriod"></span></div>
-        <div><strong>담당 역할:</strong> <span id="modalRole"></span></div>
-        <div><strong>소속/발주:</strong> <span id="modalClient"></span></div>
-        <div><strong>기술 스택:</strong> <span id="modalTech"></span></div>
-      </div>
+.nav-item.active {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
 
-      <div class="modal-content-body">
-        <h3>주요 업무 및 기여 내용</h3>
-        <ul id="modalTasks"></ul>
-      </div>
-    </div>
-  </div>
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #10b981;
+  margin-bottom: 8px;
+}
 
-  <script src="app.js"></script>
-</body>
-</html>
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Content Area */
+.content-area {
+  margin-left: 280px;
+  flex: 1;
+  padding: 60px 80px;
+  max-width: 1050px;
+}
+
+.view-section {
+  display: none;
+}
+
+.view-section.active {
+  display: block;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Common Components */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 28px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Intro Section */
+.intro-box {
+  padding-top: 40px;
+}
+
+.sub-heading {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.main-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 16px 0 20px;
+  letter-spacing: -1px;
+}
+
+.intro-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 720px;
+}
+
+.quick-links {
+  margin-top: 36px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover { background-color: var(--primary-hover); }
+
+.btn-secondary {
+  background-color: #fff;
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover { background-color: var(--border-light); }
+
+/* About Section */
+.about-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.info-item .label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.info-item .val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Skills Section */
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.skill-list {
+  list-style: none;
+}
+
+.skill-list li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 14px;
+}
+
+.skill-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+/* Experience Section */
+.time-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.company {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.period {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.position {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.exp-summary {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.exp-bullets {
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.exp-bullets li {
+  margin-bottom: 6px;
+  padding-left: 14px;
+  position: relative;
+}
+
+.exp-bullets li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+/* Projects Section */
+.section-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-group {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-chip {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.filter-chip.active {
+  background-color: var(--text-primary);
+  color: #fff;
+  border-color: var(--text-primary);
+}
+
+.project-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.proj-item {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.proj-item:hover {
+  border-color: var(--primary);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+
+.proj-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.proj-item h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.proj-item p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.proj-foot {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  border-top: 1px solid var(--border-light);
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal-window {
+  background: #fff;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  position: relative;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.modal-badge {
+  font-size: 0.8rem;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 10px 0 16px;
+}
+
+.modal-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  background-color: var(--bg-main);
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.modal-content-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.modal-content-body ul {
+  list-style: none;
+}
+
+.modal-content-body ul li {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  padding-left: 14px;
+  position: relative;
+}
+
+.modal-content-body ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; position: relative; padding: 24px; }
+  .content-area { margin-left: 0; padding: 30px 20px; }
+  .info-grid { grid-template-columns: 1fr; }
+  .project-card-grid { grid-template-columns: 1fr; }
+}
