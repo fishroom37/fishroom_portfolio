@@ -3,232 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>권기현 | 백엔드 개발자 포트폴리오</title>
-  <!-- Google Font -->
+  <title>권기현 | 3년 차 백엔드 SW 엔지니어</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2563eb;
-      --primary-light: #eff6ff;
-      --text: #1e293b;
-      --subtext: #64748b;
-      --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --border: #e2e8f0;
-      --tag-bg: #f1f5f9;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Pretendard', sans-serif; }
-    body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
-    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-    
-    /* Header */
-    header { margin-bottom: 40px; }
-    .badge { display: inline-block; padding: 4px 12px; background: var(--primary-light); color: var(--primary); font-weight: 700; border-radius: 9999px; font-size: 0.85rem; margin-bottom: 12px; }
-    h1 { font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; }
-    .intro { font-size: 1.05rem; color: var(--subtext); max-width: 720px; }
-    .contact-bar { margin-top: 16px; display: flex; gap: 16px; font-size: 0.9rem; color: var(--subtext); flex-wrap: wrap; }
-    
-    /* Skills */
-    .skills-section { background: var(--card-bg); padding: 24px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 40px; }
-    .section-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
-    .skill-group { margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-    .skill-label { font-weight: 600; font-size: 0.9rem; min-width: 90px; color: #334155; }
-    .tag { background: var(--tag-bg); color: #334155; padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; }
-    .tag.highlight { background: #dbeafe; color: #1d4ed8; }
-
-    /* Timeline / Projects */
-    .project-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; transition: transform 0.2s, box-shadow 0.2s; }
-    .project-card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
-    .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; }
-    .project-title { font-size: 1.2rem; font-weight: 700; color: #0f172a; }
-    .project-period { font-size: 0.85rem; color: var(--subtext); background: var(--tag-bg); padding: 2px 8px; border-radius: 4px; }
-    .project-role { font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 14px; }
-    .project-details { list-style: none; }
-    .project-details li { position: relative; padding-left: 18px; margin-bottom: 6px; font-size: 0.95rem; color: #334155; }
-    .project-details li::before { content: "•"; position: absolute; left: 4px; color: var(--primary); font-weight: bold; }
-    
-    footer { text-align: center; margin-top: 60px; font-size: 0.85rem; color: var(--subtext); padding-bottom: 20px; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <!-- Header -->
-    <header>
-      <span class="badge">3년 차 백엔드 소프트웨어 엔지니어</span>
-      <h1>권기현</h1>
-      <p class="intro">
-        전자정부프레임워크(eGovFrame)와 Spring/Java 기반으로 공공 포털 및 사내 엔터프라이즈 시스템을 구축·운영해 왔습니다. 건축 실무에서 익힌 끈기 있는 실행력과 구조적 사고를 바탕으로, 안정적인 데이터 처리와 신뢰할 수 있는 시스템을 설계합니다.
+  <!-- Header -->
+  <header>
+    <div class="brand">PORTFOLIO<span>.dev</span></div>
+    <nav>
+      <a href="#about">소개</a>
+      <a href="#skills">기술스택</a>
+      <a href="#projects">프로젝트</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero / Intro -->
+    <section class="hero" id="about">
+      <div class="status-badge">
+        <span class="pulse"></span> 적극 구직 중 (대구·경산 권역)
+      </div>
+      <h1>안정적인 비즈니스 로직을 구축하는<br>3년 차 백엔드 엔지니어 권기현입니다.</h1>
+      <p>
+        대학에서 건축을 전공하고 실무를 경험한 뒤, 구조적인 설계와 논리적 사고에 매력을 느껴 소프트웨어 엔지니어로 전향했습니다.<br>
+        약 3년 2개월간 전자정부프레임워크(eGovFrame) 및 Java/Spring 환경에서 다수의 공공 포털, 기업 대내외 시스템, 원가·견적 솔루션을 구축하고 유지운영했습니다.
       </p>
-      <div class="contact-bar">
-        <span>📍 거주지: 대구광역시 수성구</span>
-        <span>💼 총 경력: 3년 2개월 (2022.11 ~ 2025.12)</span>
-      </div>
-    </header>
-
-    <!-- Skills -->
-    <section class="skills-section">
-      <h2 class="section-title">🛠 핵심 기술 스택</h2>
-      <div class="skill-group">
-        <span class="skill-label">Backend</span>
-        <span class="tag highlight">Java</span>
-        <span class="tag highlight">전자정부프레임워크 (eGovFrame)</span>
-        <span class="tag highlight">Spring MVC</span>
-        <span class="tag">Spring Boot</span>
-        <span class="tag">JSP / Servlet</span>
-      </div>
-      <div class="skill-group">
-        <span class="skill-label">Database</span>
-        <span class="tag highlight">Oracle</span>
-        <span class="tag highlight">MyBatis</span>
-        <span class="tag">PostgreSQL</span>
-      </div>
-      <div class="skill-group">
-        <span class="skill-label">Frontend</span>
-        <span class="tag">HTML5 / CSS3</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">jQuery</span>
+      <div class="hero-meta">
+        <div>💼 총 경력: 3년 2개월 (2022.11 ~ 2025.12)</div>
+        <div>📍 거주지: 대구광역시 수성구 지산동</div>
+        <div>⚙️ 전문분야: eGovFrame, Spring MVC, DB 쿼리 최적화</div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section>
-      <h2 class="section-title">📂 수행 프로젝트</h2>
-
-      <!-- 1 -->
-      <article class="project-card">
-        <div class="project-header">
-          <div class="project-title">전시통합정보시스템 유지보수 (SM)</div>
-          <span class="project-period">2022.11 ~ 2024.05 (약 1년 6개월)</span>
+    <!-- Skills Dashboard -->
+    <section id="skills">
+      <div class="section-header">
+        <h2 class="section-title">보유 기술 대시보드 (Tech Stacks)</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>[01] Framework & Language</h3>
+          <div class="chip-container">
+            <span class="chip highlight">Java</span>
+            <span class="chip highlight">전자정부프레임워크 (eGov)</span>
+            <span class="chip highlight">Spring MVC</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">JSP / Servlet</span>
+          </div>
         </div>
-        <div class="project-role">(주)휴비즈아이씨티 | 웹 시스템 유지운영 및 기능 보완</div>
-        <ul class="project-details">
-          <li>전시 및 대관 정보 통합 시스템의 상시 모니터링, 예외 처리 및 실시간 결함 수정</li>
-          <li>사용자 및 관리자 요구사항에 따른 신규 리포트 조회/출력 모듈 개발</li>
-          <li>데이터베이스 인덱스 점검 및 데이터 정합성 관리를 통한 시스템 안정화</li>
-        </ul>
-      </article>
-
-      <!-- 2 -->
-      <article class="project-card">
-        <div class="project-header">
-          <div class="project-title">[경북TP] 홈페이지 추가개발 및 그룹웨어 기능연계</div>
-          <span class="project-period">2023.04 ~ 2023.08 (약 5개월)</span>
+        <div class="skill-card">
+          <h3>[02] Database & Query</h3>
+          <div class="chip-container">
+            <span class="chip highlight">Oracle</span>
+            <span class="chip highlight">MyBatis</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">쿼리 최적화 & 트랜잭션</span>
+          </div>
         </div>
-        <div class="project-role">(주)휴비즈아이씨티 | 대외 웹 서비스 및 연계 인터페이스 개발</div>
-        <ul class="project-details">
-          <li>경북테크노파크 대외 웹사이트 신규 게시판 컴포넌트 및 사용자 화면 추가 구축</li>
-          <li>사내 그룹웨어 시스템과의 SSO 단일 인증 및 데이터 연계 인터페이스 구현</li>
-          <li>공공 보안 가이드라인 및 부서별 상세 권한 제어 적용</li>
-        </ul>
-      </article>
-
-      <!-- 3 -->
-      <article class="project-card">
-        <div class="project-header">
-          <div class="project-title">경주시 평생학습 홈페이지 & 경북인재평생교육진흥원 기능 개선</div>
-          <span class="project-period">2023.04 ~ 2023.12 (약 9개월)</span>
+        <div class="skill-card">
+          <h3>[03] Frontend & UI</h3>
+          <div class="chip-container">
+            <span class="chip">HTML5 / CSS3</span>
+            <span class="chip">JavaScript (ES6+)</span>
+            <span class="chip">jQuery</span>
+            <span class="chip">웹 그리드(Grid) 연동</span>
+          </div>
         </div>
-        <div class="project-role">(주)휴비즈아이씨티 | 대민 교육 플랫폼 기능 개선 및 응용SW 개발</div>
-        <ul class="project-details">
-          <li>평생교육 강좌 개설, 온라인 수강 신청 및 정원 실시간 관리 프로세스 개편</li>
-          <li>대민 본인인증(휴대폰/간편인증) API 연동 및 개인정보 암호화 저장 처리</li>
-          <li>사용자 접점 UI 개선 및 조회 쿼리 튜닝을 통한 페이지 로딩 속도 최적화</li>
-        </ul>
-      </article>
-
-      <!-- 4 -->
-      <article class="project-card">
-        <div class="project-header">
-          <div class="project-title">원스톱 기업지원 서비스 플랫폼 구축 및 홈페이지 고도화</div>
-          <span class="project-period">2023.06 ~ 2023.10 (약 5개월)</span>
+        <div class="skill-card">
+          <h3>[04] Tools & Security</h3>
+          <div class="chip-container">
+            <span class="chip">Git / GitHub</span>
+            <span class="chip">Eclipse / IntelliJ</span>
+            <span class="chip">SW개발보안 이수</span>
+            <span class="chip">개인정보보호 가이드 준수</span>
+          </div>
         </div>
-        <div class="project-role">(주)휴비즈아이씨티 | 전자정부 백엔드 개발 및 레거시 개편</div>
-        <ul class="project-details">
-          <li>전자정부프레임워크 기반 기업 지원 사업 온라인 신청·접수 시스템 신규 구축</li>
-          <li>레거시 홈페이지 노후 코드 리팩토링 및 웹 접근성 표준 가이드 준수</li>
-          <li>서류 심사 및 평가 단계별 접수 상태 관리 트랜잭션 로직 구현</li>
-        </ul>
-      </article>
-
-      <!-- 5 -->
-      <article class="project-card">
-        <div class="project-header">
-          <div class="project-title">대구경북기업인라운지 웹사이트 구축</div>
-          <span class="project-period">2023.11 ~ 2023.12 (약 2개월)</span>
-        </div>
-        <div class="project-role">(주)휴비즈아이씨티 | 풀스택 웹 애플리케이션 개발</div>
-        <ul class="project-details">
-          <li>대구경북 기업인 교류 활성화를 위한 반응형 포털 웹사이트 개발</li>
-          <li>회원 계정 관리, 커뮤니티 게시판 및 공간 예약 신청 백엔드 구현</li>
-          <li>관리자 모드를 통한 승인 처리 자동화 및 공지사항 운영 효율화</li>
-        </ul>
-      </article>
-
-      <!-- 6 -->
-      <article class="project-card">
-        <div class="project-header">
-          <div class="project-title">포스코스틸리온 2024년 모바일 iHR 시스템 구축 용역</div>
-          <span class="project-period">2024.07 ~ 2024.10 (약 4개월)</span>
-        </div>
-        <div class="project-role">(주)휴비즈아이씨티 | 모바일 인사 시스템 백엔드 API 개발</div>
-        <ul class="project-details">
-          <li>모바일 브라우저 전용 인사정보 조회, 전자결재, 근태관리 REST API 구현</li>
-          <li>사내 기간계 ERP/HR 레거시 데이터베이스와의 연동 및 데이터 정합성 검증</li>
-          <li>임직원 현장 모바일 접근 편의성 제고를 위한 데이터 경량화 처리</li>
-        </ul>
-      </article>
-
-      <!-- 7 -->
-      <article class="project-card">
-        <div class="project-header">
-          <div class="project-title">공사원가관리 시스템 구축</div>
-          <span class="project-period">2024.10 ~ 2024.12 (약 3개월)</span>
-        </div>
-        <div class="project-role">(주)휴비즈아이씨티 | UI/UX 컴포넌트 개발 및 데이터 연동</div>
-        <ul class="project-details">
-          <li>공사 항목별 원가 산정 및 내역 관리를 위한 데이터 입력 그리드 컴포넌트 개발</li>
-          <li>대량 공사비 항목의 동적 표출 및 실시간 계산 수식 연동</li>
-          <li>공종별/현장별 누계 데이터 시각화 화면 구성</li>
-        </ul>
-      </article>
-
-      <!-- 8 -->
-      <article class="project-card">
-        <div class="project-header">
-          <div class="project-title">DOE 수주견적관리 시스템 개발</div>
-          <span class="project-period">2025.04 ~ 2025.10 (약 7개월)</span>
-        </div>
-        <div class="project-role">(주)휴비즈아이씨티 | 비즈니스 로직 및 시스템 백엔드 개발</div>
-        <ul class="project-details">
-          <li>엔지니어링 수주 견적 자동 산출 및 단계별 원가 계산 알고리즘 개발</li>
-          <li>견적서 결재 워크플로우 상태 제어 및 데이터 무결성 보장을 위한 트랜잭션 관리</li>
-          <li>견적 이력 버전 관리 및 대용량 견적 데이터 엑셀 내보내기 기능 구현</li>
-        </ul>
-      </article>
-
-      <!-- 9 -->
-      <article class="project-card">
-        <div class="project-header">
-          <div class="project-title">[포항문화재단] 포항문화포털 플랫폼 구축</div>
-          <span class="project-period">2025.07 ~ 2025.12 (약 5개월)</span>
-        </div>
-        <div class="project-role">(주)휴비즈아이씨티 | 전자정부프레임워크 백엔드 개발</div>
-        <ul class="project-details">
-          <li>전자정부프레임워크(eGovFrame) 기반 문화예술 통합 대민 포털 백엔드 구축</li>
-          <li>문화 행사 및 공연 예매/신청 모듈 연동 및 동시 신청 처리 로직 점검</li>
-          <li>MyBatis 쿼리 최적화 및 관리자 CMS 공통 모듈 커스터마이징</li>
-        </ul>
-      </article>
+      </div>
     </section>
 
-    <footer>
-      <p>© 2026 권기현. Hosted on Cloudflare Pages via GitHub.</p>
-    </footer>
+    <!-- Project List -->
+    <section id="projects">
+      <div class="section-header">
+        <h2 class="section-title">수행 프로젝트 (Card View)</h2>
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterProjects('all', event)">전체보기</button>
+          <button class="filter-btn" onclick="filterProjects('public', event)">공공·지자체</button>
+          <button class="filter-btn" onclick="filterProjects('enterprise', event)">기업 솔루션</button>
+          <button class="filter-btn" onclick="filterProjects('sm', event)">운영·SM</button>
+        </div>
+      </div>
+
+      <div class="project-grid" id="projectContainer"></div>
+    </section>
+  </main>
+
+  <!-- Modal Detail -->
+  <div class="modal-backdrop" id="modalBackdrop" onclick="closeModalOnOutside(event)">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-header">
+        <span class="category-badge" id="modalCategory">카테고리</span>
+        <h2 id="modalTitle">프로젝트 명칭</h2>
+      </div>
+      <table class="modal-meta-table">
+        <tr>
+          <td class="label">수행 기간</td>
+          <td id="modalPeriod"></td>
+        </tr>
+        <tr>
+          <td class="label">소속/발주</td>
+          <td id="modalClient"></td>
+        </tr>
+        <tr>
+          <td class="label">담당 역할</td>
+          <td id="modalRole"></td>
+        </tr>
+        <tr>
+          <td class="label">핵심 스택</td>
+          <td id="modalTech"></td>
+        </tr>
+      </table>
+      <div class="modal-body">
+        <h4>상세 수행 내역 및 기여도</h4>
+        <ul id="modalTasks"></ul>
+      </div>
+    </div>
   </div>
 
+  <footer>
+    <p>© 2026 권기현. All Rights Reserved. Hosted via Cloudflare & GitHub.</p>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
-```[cite: 1]
