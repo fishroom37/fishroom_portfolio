@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홍길동 | 웹 서비스 개발자 포트폴리오</title>
+  <meta name="description" content="웹 서비스 개발자 홍길동의 포트폴리오입니다. 기업 웹 서비스 구축, 시스템 개발, 유지보수 프로젝트 경력을 소개합니다.">
+  <meta name="theme-color" content="#0f172a">
+  <meta property="og:title" content="홍길동 | 웹 개발자 포트폴리오">
+  <meta property="og:description" content="웹 서비스 개발자 홍길동의 포트폴리오입니다.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <!-- 배경 장식 -->
+  <div class="bg-decoration" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <!-- 헤더 / 내비게이션 -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-mark">H</span>
+        <span class="brand-name" id="brandName">홍길동</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#about">소개</a>
+        <a href="#skills">기술</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#career">경력</a>
+        <a href="#contact">연락처</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 히어로 -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">Web Developer Portfolio</p>
+        <h1 class="hero-title" id="heroName">홍길동</h1>
+        <p class="hero-role" id="heroRole">웹 서비스 개발자</p>
+        <p class="hero-desc" id="heroDesc">사용자의 문제를 기술로 해결하는 웹/소프트웨어 개발자</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+          <a href="#contact" class="btn btn-ghost">연락하기</a>
+        </div>
+        <ul class="hero-meta">
+          <li id="heroMetaCompany">🏢 (주)휴비즈아이씨티 · 2022. 11 ~ 2026. 2</li>
+          <li id="heroMetaLocation">📍 서울, 대한민국</li>
+          <li id="heroMetaEmail">✉️ your@email.com</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 소개 -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title"><span class="section-no">01</span> 소개</h2>
+        <div class="about-grid">
+          <div class="about-card">
+            <p class="about-text" id="aboutText">기업 웹 서비스의 구축부터 운영·유지보수까지 전 과정을 경험한 웹 개발자입니다. 사용자가 실제로 가치를 느끼는 서비스를 만들기 위해 기획 단계부터 마지막 배포까지 함께 고민합니다. 명확하고 유지보수하기 쉬운 코드를 지향하며, 팀 내 커뮤니케이션과 문서화를 중요하게 생각합니다.</p>
+          </div>
+          <div class="about-fact">
+            <h3>Profile</h3>
+            <dl class="fact-list">
+              <div><dt>이름</dt><dd id="factName">홍길동</dd></div>
+              <div><dt>직무</dt><dd id="factRole">웹 서비스 개발자</dd></div>
+              <div><dt>근무</dt><dd id="factCompany">(주)휴비즈아이씨티</dd></div>
+              <div><dt>위치</dt><dd id="factLocation">서울, 대한민국</dd></div>
+              <div><dt>이메일</dt><dd id="factEmail">your@email.com</dd></div>
+              <div><dt>GitHub</dt><dd id="factGithub">github.com/your-id</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 기술 스택 -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title"><span class="section-no">02</span> 기술 스택</h2>
+        <div class="skills" id="skillsBox">
+        <div class="skill-item">
+          <span class="skill-name">HTML5 / CSS3</span>
+          <span class="skill-level">⭐</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">JavaScript / jQuery</span>
+          <span class="skill-level">⭐</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">JSP / Servlet</span>
+          <span class="skill-level">⭐</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Spring / MyBatis</span>
+          <span class="skill-level">⭐</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">웹 접근성 / NUX 표준</span>
+          <span class="skill-level">⭐</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Oracle / MySQL</span>
+          <span class="skill-level">⭐</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">SVN / Git</span>
+          <span class="skill-level">⭐</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">시스템 유지보수</span>
+          <span class="skill-level">⭐</span>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- 프로젝트 -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title"><span class="section-no">03</span> 프로젝트</h2>
+        <p class="section-sub">참여한 기업 프로젝트 및 용역 과제입니다. (경력관리시스템 기술경력 기반)</p>
+        <div class="filter-bar" id="filterBar" role="tablist" aria-label="프로젝트 분류">
+        <button class="chip active" role="tab" aria-selected="true" data-filter="전체">전체</button>
+        <button class="chip " role="tab" aria-selected="false" data-filter="응용 SW 개발">응용 SW 개발</button>
+        <button class="chip " role="tab" aria-selected="false" data-filter="시스템 SW 개발">시스템 SW 개발</button>
+        <button class="chip " role="tab" aria-selected="false" data-filter="UI/UX 개발">UI/UX 개발</button>
+        <button class="chip " role="tab" aria-selected="false" data-filter="IT기술교육">IT기술교육</button></div>
+        <div class="project-grid" id="projectGrid">
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">응용 SW 개발</span>
+            <span class="project-type">구축</span>
+            <span class="project-period">2025.07.30 - 2025.12.10</span>
+          </div>
+          <h3 class="project-title">포항문화포털 플랫폼 구축</h3>
+          <p class="project-org">포항문화재단 · 개발</p>
+          <p class="project-desc">지역 문화 정보 통합 포털 플랫폼 구축에 참여했습니다. 포털의 사용자 화면과 관리 기능 개발, 콘텐츠 연동을 담당했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">시스템 SW 개발</span>
+            <span class="project-type">구축</span>
+            <span class="project-period">2025.04.01 - 2025.10.15</span>
+          </div>
+          <h3 class="project-title">DOE 수주견적관리</h3>
+          <p class="project-org">(주)휴비즈아이씨티 · 개발</p>
+          <p class="project-desc">수주·견적 업무를 관리하는 시스템 개발에 참여했습니다. 견적 작성, 결재, 수주 이력 관리 기능을 구현했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">UI/UX 개발</span>
+            <span class="project-type">구축</span>
+            <span class="project-period">2024.10.15 - 2024.12.31</span>
+          </div>
+          <h3 class="project-title">공사원가관리 시스템 구축</h3>
+          <p class="project-org">(주)휴비즈아이씨티 · UI/UX 개발</p>
+          <p class="project-desc">공사 원가 데이터를 구조화해 관리하는 시스템의 UI/UX 화면 개발을 담당했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">응용 SW 개발</span>
+            <span class="project-type">용역</span>
+            <span class="project-period">2024.07.15 - 2024.10.31</span>
+          </div>
+          <h3 class="project-title">포스코스틸리온 모바일 iHR 시스템 구축</h3>
+          <p class="project-org">포스코스틸리온 · 개발</p>
+          <p class="project-desc">포스코스틸리온의 모바일 인사(HR) 시스템 구축 용역에 참여했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">IT기술교육</span>
+            <span class="project-type">교육</span>
+            <span class="project-period">2024.01.01 - 2024.05.08</span>
+          </div>
+          <h3 class="project-title">SW전문인재양성사업 (2차)</h3>
+          <p class="project-org">고용노동부 · 참여</p>
+          <p class="project-desc">SW 전문 인재 양성 교육과정에 참여하며 실무 역량을 향상했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">응용 SW 개발</span>
+            <span class="project-type">구축</span>
+            <span class="project-period">2023.11.13 - 2023.12.15</span>
+          </div>
+          <h3 class="project-title">대구경북기업인라운지 웹사이트 구축</h3>
+          <p class="project-org">대구경북지역 기업지원기관 · 개발</p>
+          <p class="project-desc">기업인 라운지의 공식 웹사이트를 구축했습니다. 안내 페이지와 콘텐츠 관리 기능을 개발했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">응용 SW 개발</span>
+            <span class="project-type">구축/고도화</span>
+            <span class="project-period">2023.06.01 - 2023.10.02</span>
+          </div>
+          <h3 class="project-title">원스톱 기업지원 서비스 플랫폼 구축 및 홈페이지 고도화</h3>
+          <p class="project-org">기업지원 유관기관 · 개발</p>
+          <p class="project-desc">기업지원 서비스를 한곳에서 이용할 수 있는 플랫폼 구축과 기존 홈페이지의 고도화 작업에 참여했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">응용 SW 개발</span>
+            <span class="project-type">운영/개선</span>
+            <span class="project-period">2023.05.09 - 2023.09.05</span>
+          </div>
+          <h3 class="project-title">경주시 평생학습 홈페이지 기능 개선</h3>
+          <p class="project-org">경주시 · 개발</p>
+          <p class="project-desc">경주시 평생학습 홈페이지의 기능 개선 작업을 진행했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">응용 SW 개발</span>
+            <span class="project-type">구축</span>
+            <span class="project-period">2023.04.11 - 2023.08.31</span>
+          </div>
+          <h3 class="project-title">홈페이지 추가개발 및 그룹웨어 기능연계</h3>
+          <p class="project-org">경북테크노파크(경북TP) · 개발</p>
+          <p class="project-desc">경북TP 홈페이지 추가 개발과 그룹웨어 기능 연계 작업에 참여했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">응용 SW 개발</span>
+            <span class="project-type">유지보수</span>
+            <span class="project-period">2023.04.01 - 2023.12.31</span>
+          </div>
+          <h3 class="project-title">기능 개선 및 유지보수</h3>
+          <p class="project-org">경북인재평생교육진흥원 · 유지보수</p>
+          <p class="project-desc">경북인재평생교육진흥원 시스템의 기능 개선과 유지보수를 담당했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">IT기술교육</span>
+            <span class="project-type">교육</span>
+            <span class="project-period">2023.01.01 - 2023.12.31</span>
+          </div>
+          <h3 class="project-title">SW전문인재양성사업 (1차)</h3>
+          <p class="project-org">고용노동부 · 참여</p>
+          <p class="project-desc">SW 전문 인재 양성 교육과정에 참여하며 웹 개발 실무 역량을 향상했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-category">응용 SW 개발</span>
+            <span class="project-type">유지보수</span>
+            <span class="project-period">2022.11.14 - 2024.05.08</span>
+          </div>
+          <h3 class="project-title">전시통합정보시스템 유지보수</h3>
+          <p class="project-org">전시·박람회 운영기관 · 유지보수</p>
+          <p class="project-desc">전시통합정보시스템의 운영과 유지보수를 담당했습니다.</p>
+          <div class="project-links">
+            <span class="link link-muted">공개 URL 준비 중</span>
+          </div>
+        </article></div>
+      </div>
+    </section>
+
+    <!-- 경력 -->
+    <section class="section section-alt" id="career">
+      <div class="container">
+        <h2 class="section-title"><span class="section-no">04</span> 경력</h2>
+        <div class="career-grid">
+          <div>
+            <h3 class="block-title">근무 경력</h3>
+            <div class="timeline" id="careerTimeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-period">2022. 11 - 현재</p>
+          <h4 class="timeline-title">(주)휴비즈아이씨티</h4>
+          <p class="timeline-role">개발팀 · 웹 개발</p>
+          <p class="timeline-desc">기업 웹 서비스 구축, 시스템 개발 및 유지보수 담당</p>
+        </div>
+      </div></div>
+          </div>
+          <div>
+            <h3 class="block-title">학력 · 교육</h3>
+            <div class="timeline" id="eduTimeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-period">졸업</p>
+          <span class="timeline-tag">학력</span>
+          <h4 class="timeline-title">건축공학 전문학사</h4>
+          <p class="timeline-role">영남이공대학</p>
+          
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-period">2024.04.18</p>
+          <span class="timeline-tag">교육</span>
+          <h4 class="timeline-title">[개인정보 보호법] 주요 법 개정사항</h4>
+          <p class="timeline-role">개인정보보호위원회</p>
+          
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-period">2024.04.15 - 2024.04.26</p>
+          <span class="timeline-tag">교육</span>
+          <h4 class="timeline-title">AI 인공지능 기본과정</h4>
+          <p class="timeline-role">정보통신산업진흥원</p>
+          
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-period">2024.04.08</p>
+          <span class="timeline-tag">교육</span>
+          <h4 class="timeline-title">[NEW] 개인정보 안전성 확보조치</h4>
+          <p class="timeline-role">개인정보보호위원회</p>
+          
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-period">2024.04.05 - 2024.04.08</p>
+          <span class="timeline-tag">교육</span>
+          <h4 class="timeline-title">[NEW] 개인정보 안전성 확보조치</h4>
+          <p class="timeline-role">개인정보보호위원회</p>
+          
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-period">2024.02.15 - 2024.03.26</p>
+          <span class="timeline-tag">교육</span>
+          <h4 class="timeline-title">블록체인 BM과정 (Web3.0 비즈니스모델)</h4>
+          <p class="timeline-role">(재)포항테크노파크</p>
+          
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-period">2023.06.15</p>
+          <span class="timeline-tag">교육</span>
+          <h4 class="timeline-title">SW개발보안 기본과정 (개발자 대상) [1차]</h4>
+          <p class="timeline-role">한국인터넷진흥원</p>
+          
+        </div>
+      </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 연락처 -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title"><span class="section-no">05</span> 연락처</h2>
+        <div class="contact-wrap">
+          <p class="contact-desc">새로운 프로젝트, 협업, 제안이 있다면 언제든 연락 주세요.</p>
+          <div class="contact-links">
+            <a id="contactEmail" class="contact-item" href="mailto:your@email.com">
+              <span class="contact-icon">✉️</span>
+              <span id="contactEmailText">your@email.com</span>
+            </a>
+            <a id="contactGithub" class="contact-item" href="https://github.com/your-id" target="_blank" rel="noopener">
+              <span class="contact-icon">🐙</span>
+              <span id="contactGithubText">github.com/your-id</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="footerText">© 2026 홍길동. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top" id="scrollTop" aria-label="맨 위로">↑</a>
+
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+</body></html>

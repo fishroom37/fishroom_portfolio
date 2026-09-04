@@ -1,0 +1,3 @@
+CMAPS_PARSED: 1
+WROTE: C:\Users\user\Desktop\fishroom_portfolio\career_runs.txt (runs=0)
+FONT_OBJ_TO_UNICODE: 16
