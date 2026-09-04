@@ -118,8 +118,9 @@ img { max-width: 100%; display: block; }
 
 /* ---------- 소개 ---------- */
 .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; }
-.about-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow); }
-.about-text { color: var(--text); font-size: 1.05rem; white-space: pre-line; }
+.about-text { max-width: 680px; font-size: 16px; line-height: 1.8; color: var(--text-soft); }
+.about-text p { margin-bottom: 1em; }
+.about-text p:last-child { margin-bottom: 0; }
 .about-fact { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); }
 .about-fact h3 { font-size: 15px; font-weight: 700; margin-bottom: 18px; color: var(--text-soft); }
 .fact-list div { display: flex; justify-content: space-between; gap: 14px; padding: 11px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; }
@@ -127,15 +128,36 @@ img { max-width: 100%; display: block; }
 .fact-list dt { color: var(--text-faint); flex-shrink: 0; }
 .fact-list dd { text-align: right; font-weight: 500; word-break: break-all; }
 /* ---------- 기술 스택 ---------- */
-.skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
-.skill-item {
-  display: flex; align-items: center; justify-content: space-between;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
-  padding: 16px 20px; box-shadow: var(--shadow); transition: transform .2s, border-color .2s;
+#skillsBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px 32px;
 }
-.skill-item:hover { transform: translateY(-2px); border-color: var(--accent); }
-.skill-name { font-weight: 600; font-size: 15px; }
-.skill-level { color: var(--accent); font-size: 13px; }
+.skill-group-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--line);
+  color: var(--text-soft);
+}
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.skill-item {
+  font-size: 15px;
+  color: var(--text);
+  padding-left: 10px;
+  position: relative;
+}
+.skill-item::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: var(--text-faint);
+}
 
 /* ---------- 필터 ---------- */
 .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }

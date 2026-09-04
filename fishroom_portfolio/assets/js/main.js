@@ -60,31 +60,20 @@
 
   /* ---------- 기술 스택 (그룹별) ---------- */
   function renderSkills() {
-    const box = $("#skillsBox");
+    const container = $('#skillsBox');
     const groups = {};
-    d.skills.forEach((s) => {
-      const g = s.group || "기술";
+    d.skills.forEach(s => {
+      const g = s.group || '기타';
       (groups[g] = groups[g] || []).push(s);
     });
-    box.innerHTML = Object.keys(groups)
-      .map(
-        (g) => `
-        <div class="skill-group">
-          <h3 class="skill-group-title">${escapeHTML(g)}</h3>
-          <div class="skill-items">
-            ${groups[g]
-              .map(
-                (s) => `
-                <div class="skill-item">
-                  <span class="skill-name">${escapeHTML(s.name)}</span>
-                  ${s.level ? `<span class="skill-level">${escapeHTML(s.level)}</span>` : ""}
-                </div>`
-              )
-              .join("")}
-          </div>
-        </div>`
-      )
-      .join("");
+    container.innerHTML = Object.keys(groups).map(g => `
+      <div class="skill-group">
+        <h3 class="skill-group-title">${escapeHTML(g)}</h3>
+        <div class="skill-list">
+          ${groups[g].map(s => `<div class="skill-item">${escapeHTML(s.name)}</div>`).join('')}
+        </div>
+      </div>
+    `).join('');
   }
 
   /* ---------- 프로젝트 ---------- */

@@ -8,13 +8,27 @@ const SITE = {
   name: "권기현",
   role: "웹 서비스 개발자",
   description: "기업·공공 웹 서비스의 구축과 운영·유지보수를 경험한 웹 개발자",
-  about: [],
+  about: [
+    "기업·공공 웹 서비스의 구축부터 운영·유지보수까지 함께한 웹 개발자 권기현입니다.",
+    "포스코 계열사 내부 시스템과 포항문화재단, 경주시, 경북테크노파크 등 공공기관의 시스템 구축에 참여하며, 사용자 관점의 화면 설계와 유지보수하기 쉬운 구조를 고민해 왔습니다.",
+    "새로운 기술을 익혀 실제 업무에 적용하는 것을 즐기며, 명확한 커뮤니케이션과 문서화를 중요하게 생각합니다."
+  ],
   email: "732778@gmail.com",
   github: "https://github.com/fishroom37",
   location: "대구, 대한민국",
 
   /* ---------- 기술 스택 ---------- */
-  skills: [],
+  skills: [
+    { name: "HTML5 / CSS3", group: "Frontend", level: "" },
+    { name: "JavaScript / jQuery", group: "Frontend", level: "" },
+    { name: "웹 접근성 / NUX 표준", group: "Frontend", level: "" },
+    { name: "UI/UX 화면 개발", group: "Frontend", level: "" },
+    { name: "JSP / Servlet", group: "Backend", level: "" },
+    { name: "Spring / MyBatis", group: "Backend", level: "" },
+    { name: "Oracle / MySQL", group: "데이터베이스", level: "" },
+    { name: "SVN / Git", group: "협업 · 도구", level: "" },
+    { name: "시스템 유지보수", group: "협업 · 도구", level: "" }
+  ],
 
   /* ---------- 참여 프로젝트 (기술경력) ---------- */
   projects: [
